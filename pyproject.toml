@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "homework-code-review-workflow"
+version = "1.0.0"
+description = "Three-role Python generation, review and repair workflow"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+code-review-workflow = "workflow_agent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["workflow_agent*"]
+
+[tool.setuptools.package-data]
+workflow_agent = ["prompts/*.txt"]
